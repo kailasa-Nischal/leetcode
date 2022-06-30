@@ -4,7 +4,7 @@ public static int traverse(int m,int n,int[][] dp,int[] ans,int i,int j){
 		if(dp[i][j]!=0)	return dp[i][j];
 		int rgt=traverse(m, n, dp, ans, i, j+1);
 		int down=traverse(m, n, dp, ans, i+1, j);
-		return dp[i][j]=(up+down);
+		return dp[i][j]=(rgt+down);
 	}
 	public int uniquePaths(int m, int n) {
         int[][] dp=new int[m+1][n+1];
